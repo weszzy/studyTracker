@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Study Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Study Tracker</h1>
+    <div class="container">
+        <label for="hours">Study Hours:</label>
+        <input type="number" id="hours" min="0">
+        <br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject">
+        <br>
+        <label for="notes">Notes:</label>
+        <textarea id="notes"></textarea>
+        <br>
+        <button onclick="addStudy()">Add Study</button>
+        <ul id="studyList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
