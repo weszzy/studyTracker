@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Tracker</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Study Tracker</h1>
     <div class="container">
-        <label for="hours">Study Hours:</label>
-        <input type="number" id="hours" min="0">
-        <br>
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject">
-        <br>
-        <label for="notes">Notes:</label>
-        <textarea id="notes"></textarea>
-        <br>
-        <button onclick="addStudy()">Add Study</button>
+        <h1 class="title">Study Tracker</h1>
+        <div class="form-container">
+            <label for="hours">Study Hours:</label>
+            <input type="number" id="hours" min="0">
+            <br>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject">
+            <br>
+            <label for="notes">Notes:</label>
+            <textarea id="notes"></textarea>
+            <br>
+            <button onclick="addStudy()">Add Study</button>
+        </div>
         <ul id="studyList"></ul>
     </div>
 
