@@ -38,7 +38,7 @@ button {
     display: block;
     width: 100%;
     padding: 8px;
-    background-color: #FFB6C1;
+    background-color: #7B72B9;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background-color: #FF69B4;
+    background-color: #a59dda;
 }
 
 ul {
