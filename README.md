@@ -13,12 +13,12 @@ The Study Tracker is a web application that allows you to track your study sessi
 
 <div display: inline-block;>
 
-<img alt="Java" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img alt="html" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 
 
-<img alt="Jira" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img alt="css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 
-<img alt="Jira" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img alt="js" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
 
 
@@ -51,4 +51,6 @@ This project is licensed under the MIT License.
 The Study Tracker was developed as a learning project.
 
 ## Screenshots
-<img src="https://i.imgur.com/mzIRZ4l.png">
+<img src="https://i.imgur.com/ZrjyvQJ.png">
+<img src="https://i.imgur.com/6tIZEAq.png">
+
