@@ -8,6 +8,8 @@ The Study Tracker is a web application that allows you to track your study sessi
 - View a list of all study entries with their respective details.
 - Delete study entries when they are no longer needed.
 - Responsive design for seamless usage on desktop and mobile devices.
+- Automatic caching of study entries in the browser
+- Toggle between light and dark themes
 
 ## Technologies Used
 
@@ -43,6 +45,10 @@ The Study Tracker is a web application that allows you to track your study sessi
 4. Click the "Add Study" button to add the study entry to the list.
 
 5. To delete a study entry, click the "x" button next to it.
+
+6. The study entries are automatically cached in the browser, so they will persist even after refreshing the page.
+
+7. Use the theme toggle button (located in the top right corner of the study tracker) to switch between light and dark themes based on your preference.
 
 ## License
 This project is licensed under the MIT License.
