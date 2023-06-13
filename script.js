@@ -11,8 +11,8 @@ function setThemeBasedOnBrowser() {
 
 const browserLanguage = navigator.language;
 
-        // Set the document language to the browser language
-        document.documentElement.lang = browserLanguage;
+// Set the document language to the browser language
+document.documentElement.lang = browserLanguage;
 
 // Toggle between light and dark mode
 function toggleTheme() {
@@ -67,20 +67,26 @@ function getCurrentTime() {
 
 function breakLongNotes(notes) {
     if (notes.length > 30) {
-        return notes.slice(0, 30) + '<br>' + notes.slice(30);
+        const truncatedNotes = notes.slice(0, 30);
+        const remainingNotes = notes.slice(30);
+        return truncatedNotes + "<br>" + breakLongNotes(remainingNotes);
     }
     return notes;
 }
 
 function saveStudyEntry(studyEntry) {
     let studyEntries = [];
-    const cachedEntries = localStorage.getItem('studyEntries');
 
+    // Get the existing study entries from local storage
+    const cachedEntries = localStorage.getItem('studyEntries');
     if (cachedEntries) {
         studyEntries = JSON.parse(cachedEntries);
     }
 
+    // Add the new study entry to the array
     studyEntries.push(studyEntry);
+
+    // Save the updated study entries to local storage
     localStorage.setItem('studyEntries', JSON.stringify(studyEntries));
 }
 
