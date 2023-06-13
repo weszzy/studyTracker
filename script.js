@@ -1,6 +1,3 @@
-// Check if there are any study entries in the cache on page load
-window.addEventListener('DOMContentLoaded', loadStudyEntries);
-
 function addStudy() {
     const hoursInput = document.getElementById('hours');
     const subjectInput = document.getElementById('subject');
@@ -36,62 +33,7 @@ function addStudy() {
     }
 }
 
-function removeStudy(element) {
-    const studyItem = element.parentNode;
-    studyItem.parentNode.removeChild(studyItem);
 
-    // Remove the study entry from cache
-    const studyEntryIndex = Array.from(studyItem.parentNode.children).indexOf(studyItem);
-    removeStudyEntryFromCache(studyEntryIndex);
-
-    // Reload the study entries from cache
-    loadStudyEntries();
-}
-
-function removeStudyEntryFromCache(index) {
-    let studyEntries = [];
-
-    // Get the existing study entries from the cache
-    const cachedEntries = localStorage.getItem('studyEntries');
-    if (cachedEntries) {
-        studyEntries = JSON.parse(cachedEntries);
-    }
-
-    // Remove the study entry at the specified index
-    studyEntries.splice(index, 1);
-
-    // Save the updated study entries to the cache
-    localStorage.setItem('studyEntries', JSON.stringify(studyEntries));
-}
-
-function loadStudyEntries() {
-    const studyList = document.getElementById('studyList');
-    studyList.innerHTML = '';
-
-    // Get the study entries from the cache
-    const cachedEntries = localStorage.getItem('studyEntries');
-    if (cachedEntries) {
-        const studyEntries = JSON.parse(cachedEntries);
-
-        // Iterate through the study entries and display them
-        studyEntries.forEach((entry, index) => {
-            if (entry) { // Check if the study entry is valid
-                const studyItem = document.createElement('li');
-                studyItem.innerHTML = `
-            <strong>Studied ${entry.hours} hours</strong> - ${entry.subject}<br>
-            <strong>Notes:</strong><br>
-            <span class="long-notes">${breakLongNotes(entry.notes)}</span>
-            <button class="delete-btn" onclick="removeStudy(this)">x</button>
-            <div class="study-info">${getCurrentTime()}</div>
-          `;
-                studyList.appendChild(studyItem);
-
-                // Add a unique identifier to the study item
-                studyItem.setAttribute('data-entry-index', index);
-            }
-        });
-    }
-}
 
 function getCurrentTime() {
     const now = new Date();
