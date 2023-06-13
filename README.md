@@ -38,4 +38,4 @@ This project is licensed under the MIT License.
 The Study Tracker was developed as a learning project.
 
 ## Screenshots
-Soon...
+<img src="https://i.imgur.com/mzIRZ4l.png">
